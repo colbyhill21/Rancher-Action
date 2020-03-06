@@ -14,13 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rancher Action
-        uses: colbyhill21/Rancher-Action@v1.0
+        uses: colbyhill21/Rancher-Action@1.1
         with: 
           args: '"get pods"'
           token: ${{ secrets.RANCHER_TOKEN }}
           context: ${{ secrets.RANCHER_CONTEXT }}
           url: ${{ secrets.RANCHER_URL }}
 ```
+          
 ## Inputs
 
 - `token`: Rancher Token for logging in.
