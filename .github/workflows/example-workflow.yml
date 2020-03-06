@@ -6,9 +6,8 @@ jobs:
     name: Rancher-Action-Example-Workflow
     runs-on: ubuntu-latest    
     steps:
-      - uses: actions/checkout@v1
-      - name: Execute Rancher Command
-        uses: ./action
+      - name: Rancher CLI Action
+        uses: colbyhill21/Rancher-Action@1.0
         with:
           args: '"get pods"'
           token: ${{ secrets.RANCHER_TOKEN }}
