@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: Rancher CLI Action
-        uses: colbyhill21/Rancher-Action@1.0
+        uses: colbyhill21/Rancher-Action@master
         with:
           args: '"get pods"'
           token: ${{ secrets.RANCHER_TOKEN }}
