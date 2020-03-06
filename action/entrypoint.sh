@@ -1,9 +1,9 @@
 #!/bin/sh -l
 
 
-RANCHER_TOKEN="$INPUT_RANCHER_TOKEN"
-RANCHER_CONTEXT="$INPUT_RANCHER_CONTEXT"
-RANCHER_URL="$INPUT_RANCHER_URL"
+token="$INPUT_TOKEN"
+context="$INPUT_CONTEXT"
+url="$INPUT_URL"
 
-rancher login --token RANCHER_TOKEN --context RANCHER_CONTEXT RANCHER_URL
+rancher login --token token --context context url
 rancher kubectl $*
