@@ -11,6 +11,9 @@ jobs:
         uses: ./action
         with: 
           args: '"get pods"'
-          token: ${{ secrets.RANCHER_TOKEN }}
-          context: ${{ secrets.RANCHER_CONTEXT }}
-          url: ${{ secrets.RANCHER_URL }}
+          token: atoken
+          context: acontext
+          url: aurl
+#           token: ${{ secrets.RANCHER_TOKEN }}
+#           context: ${{ secrets.RANCHER_CONTEXT }}
+#           url: ${{ secrets.RANCHER_URL }}
