@@ -1,0 +1,17 @@
+name: A workflow for my Hello World file
+on: push
+
+jobs:
+  build:
+    name: Rancher-Action-Example-Workflow
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Execute Rancher Command
+        uses: ./action
+        with: 
+          args: '"get pods"'
+        env:
+          RANCHER_TOKEN: ${{ secrets.RANCHER_TOKEN }}
+          RANCHER_CONTEXT: ${{ secrets.RANCHER_CONTEXT }}
+          RANCHER_URL: ${{ secrets.RANCHER_URL }}
