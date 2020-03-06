@@ -9,9 +9,6 @@ RUN apt-get install -y kubectl=1.15.2-00
 RUN wget "https://releases.rancher.com/cli2/v2.2.0/rancher-linux-amd64-v2.2.0.tar.gz"
 RUN tar -xvzf rancher-linux-amd64-v2.2.0.tar.gz
 RUN cp rancher-v2.2.0/rancher /usr/local/bin/rancher
-RUN rancher -v
-RUN rm rancher-linux-amd64-v2.2.0.tar.gz
-RUN rm -rf rancher-v2.2.0
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
