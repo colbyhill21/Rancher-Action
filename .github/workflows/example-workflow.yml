@@ -11,7 +11,6 @@ jobs:
         uses: ./action
         with: 
           args: '"get pods"'
-        env:
           RANCHER_TOKEN: ${{ secrets.RANCHER_TOKEN }}
           RANCHER_CONTEXT: ${{ secrets.RANCHER_CONTEXT }}
           RANCHER_URL: ${{ secrets.RANCHER_URL }}
