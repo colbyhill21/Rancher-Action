@@ -6,14 +6,10 @@ jobs:
     name: Rancher-Action-Example-Workflow
     runs-on: ubuntu-latest    
     steps:
-      - uses: actions/checkout@v1
       - name: Execute Rancher Command
         uses: ./action
-        with: 
+        with:
           args: '"get pods"'
-          token: atoken
-          context: acontext
-          url: aurl
-#           token: ${{ secrets.RANCHER_TOKEN }}
-#           context: ${{ secrets.RANCHER_CONTEXT }}
-#           url: ${{ secrets.RANCHER_URL }}
+          token: ${{ secrets.RANCHER_TOKEN }}
+          context: ${{ secrets.RANCHER_CONTEXT }}
+          url: ${{ secrets.RANCHER_URL }}
